@@ -57,12 +57,102 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+@media (min-width: 572px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h1,
+.h1 {
+  font-size: 2.5em;
+}
+
+h2,
+.h2 {
+  font-size: 2.3em;
+}
+
+h3,
+.h3 {
+  font-size: 2em;
+}
+
+h4,
+.h4 {
+  font-size: 1.6em;
+}
+
+h3,
+.h3 {
+  font-size: 1.4em;
+}
+
+h3,
+.h3 {
+  font-size: 1.2em;
+}
+
+.main-title {
+  margin-bottom: 2rem;
+  font-size: 3em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+  color: #f891d4;
+}
+
+.l4-title {
+  font-family: "Piazzolla", serif;
+  color: #f891d4;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -15px;
 }
 
 html {
@@ -81,6 +171,87 @@ body {
   text-align: left;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+li,
+ol,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fas,
+.far,
+.fab,
+.fa {
+  margin: 0 0.25rem;
+  vertical-align: middle;
+}
+
+.img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.img-rounded {
+  border-radius: 50%;
+}
+
+.py-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bg-bw {
+  background-color: #e9f5ff;
+}
+
+.section-header {
+  color: #333232;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: #fad9eb;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  outline: none;
+  user-select: none;
+  transition: 0.3s ease;
+}
+.btn.btn-mini {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+.btn.btn-big {
+  padding: 0.75rem 0.5rem;
+}
+.btn.btn-outline:hover {
+  background-color: transparent;
+  border-color: #f891d4;
+  color: #f891d4;
+}
+
 header.header {
   position: absolute;
   left: 0;
@@ -89,9 +260,9 @@ header.header {
   height: 80px;
   padding-top: 0rem;
   font-family: "Ubuntu";
-  border-top: 6px solid #f773b5;
+  border-top: 6px solid #f891d4;
   background-color: transparent;
-  color: #eaf6ff;
+  color: #e9f5ff;
   z-index: 999;
 }
 header.header .header-container {
@@ -123,14 +294,47 @@ header.header nav.navigation .nav-links .nav-item .nav-link {
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
-header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header nav.navigation .nav-links .nav-item .nav-link:active, header.header nav.navigation .nav-links .nav-item .nav-link.active {
+header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header nav.navigation .nav-links .nav-item .nav-link:active, header.header nav.navigation .nav-links .nav-item .nav-link.active, header.header nav.navigation .nav-links .nav-item .nav-link:hover {
   color: #fddcf2;
   border-block-color: #fddcf2;
+}
+header.header nav.navigation .nav-links .nav-item.submenu {
+  position: relative;
+}
+header.header nav.navigation .nav-links .nav-item.submenu:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+header.header nav.navigation .nav-links .nav-item.submenu .dropdown-menu {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 150%;
+  min-width: 200px;
+  padding: 0;
+  text-align: left;
+  background-color: #f891d4;
+  color: #e9f5ff;
+  border: none;
+  border-radius: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+}
+header.header nav.navigation .nav-links .nav-item.submenu a.nav-link {
+  display: block;
+  width: 100%;
+  transition: color 0.25s ease-in;
+}
+header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, header.header nav.navigation .nav-links .nav-item.submenu a.nav-linka:active, header.header nav.navigation .nav-links .nav-item.submenu a.nav-link.active, header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover {
+  color: header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, header.header nav.navigation .nav-links .nav-item.submenu a.nav-linka:active, header.header nav.navigation .nav-links .nav-item.submenu a.nav-link.active, header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover sec-color;
+  border-bottom-color: transparent;
 }
 
 .banner {
   padding: 12em 2em 8em 2em;
-  background: linear-gradient(to bottom, rgba(247, 115, 181, 0.7) 20%, rgba(255, 255, 255, 0.4)), url("../imgs/banner/piste-avion.jpg");
+  background: linear-gradient(to bottom, rgba(248, 145, 212, 0.7) 20%, rgba(255, 255, 255, 0.4)), url("../imgs/banner/piste-avion.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -140,9 +344,9 @@ header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header
   width: 70%;
   margin-top: -2.5rem;
   margin-left: auto;
-  font-family: "Ubuntu";
   margin-right: auto;
   padding-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(248, 145, 212, 0.75);
 }
 .banner .banner-wrapper .b-title {
   font-family: "Dancing Script";
@@ -150,7 +354,7 @@ header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #f8f8f8;
+  color: #e9f5ff;
   line-height: 2;
 }
 .banner .banner-wrapper p {
@@ -160,22 +364,86 @@ header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header
   font-weight: 700;
   margin-bottom: 2rem;
 }
-.banner .banner-wrapper .btn {
-  font-family: Open Sans Condensed;
-  font-weight: 700;
-  text-decoration: none;
-  margin-top: 0px;
-  padding: 15px 20px;
-  letter-spacing: 2px;
-  background: #f891d4;
-  color: white;
-  border-radius: 5px;
-  border: 2px solid #fdabe0;
-  transition: all 0.5s ease-in-out;
-  outline: none;
-  user-select: none;
+
+.card .card-wrapper {
+  display: flex;
 }
-.banner .banner-wrapper .btn:hover {
-  color: white;
-  background: transparent;
+.card .card-wrapper article {
+  margin-right: 1rem;
+  padding: 0 1rem 0 1.5rem;
+  border: 2px solid transparent;
+  border-right-color: rgba(250, 217, 235, 0.55);
+}
+.card .card-wrapper article:last-child {
+  border-right-color: transparent;
+}
+.card .card-wrapper article header {
+  margin-bottom: 2rem;
+}
+.card .card-wrapper article h4 {
+  min-width: 75%;
+  font-size: 1.6em;
+  font-family: "Piazzolla", serif;
+  font-weight: 500;
+  color: #f891d4;
+}
+.card .card-wrapper article p {
+  color: #333232;
+}
+
+#mentors .mentors-wrapper .mentors-container .mentor-box {
+  width: 25%;
+  flex: 0 0 25%;
+}
+#mentors .mentors-wrapper .mentors-container .box {
+  text-align: center;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 1px 1px 3px rgba(248, 145, 212, 0.25), -1px -1px 3px rgba(248, 145, 212, 0.25);
+}
+#mentors .mentors-wrapper .mentors-container .mentor-img {
+  width: 200px;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.footer .footer-blocks .footer-block {
+  width: 50%;
+  flex: 0 0 50%;
+}
+.footer .footer-blocks .f-links li {
+  margin-bottom: 1rem;
+}
+.footer .footer-blocks .f-links li a {
+  padding: 0.5rem 0;
+  color: #333232;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.footer .footer-blocks .f-links li a:hover {
+  color: #f891d4;
+  border-bottom-color: #f891d4;
+}
+.footer .footer-blocks .s-links ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.footer .footer-blocks .s-links a {
+  padding: 1rem;
+  color: #333232;
+  transition: 0.3s ease;
+}
+.footer .footer-blocks .s-links a:hover {
+  color: #f891d4;
+}
+.footer .footer-blocks .copyright {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #f891d4;
+  text-align: center;
 }

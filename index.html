@@ -1,62 +1,232 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="Latif" content="SMART-IT" />
-        <title>Flores Tours & Travels | Acceuil</title>
-        <!---------------- Lien de notrefichier css ----------------------  -->
-        <link rel="stylesheet" href="assets/stylesheets/screen.css" />
-        <!-- ------------ Font awesome link ( lien externes pour les icones) ------------------ -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        />
-        <link rel="icon" href="assets/imgs/logo.png" />
-    </head>
-    <body>
-        <!-- Header section -->
-        <header class="header" id="header">
-            <div class="container">
-                <div class="header-container">
-                    <a href="#" class="logo"
-                        ><img src="assets/imgs/logo.png" alt="Le Logo"
-                    /></a>
-                    <!-- Navigation begin -->
-                    <nav class="navigation">
-                        <ul class="nav-links">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Newsletter</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">A propos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- End navigation -->
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Latif" content="SMART-IT" />
+    <title>Flores Tours & Travels | Acceuil</title>
+    <!---------------- Lien de notrefichier css ----------------------  -->
+    <link rel="stylesheet" href="assets/stylesheets/screen.css" />
+    <!-- ------------ Font awesome link ( lien externes pour les icones) ------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="icon" href="assets/imgs/logo.png" />
+</head>
+
+<body>
+    <!-- Header section -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo"><img src="assets/imgs/logo.png" alt="Le Logo" /></a>
+                <!-- Navigation begin -->
+                <nav class="navigation">
+                    <ul class="nav-links">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Accueil</a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <!-- Submenu link -->
+                            <a href="#" class="nav-link">Services</a>
+                            <ul class="dropdown-menu">
+                                <!------------ Dropdown Menu -------->
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Infos Sur Vols</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Diverses Reservations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Tourismes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Evenements</a>
+                                </li>
+                            </ul>
+                            <!-- End Dropdown Menu -->
+                        </li>
+                        <!-- End submenu link -->
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End navigation -->
             </div>
-        </header>
-        <!-- End header section -->
-        <section class="banner" id="banner">
-            <div class="container">
-                <div class="banner-wrapper">
-                    <h1 class="b-title">Flores Tours & Travels</h1>
-                    <p>Votre Agence de Voyage</p>
-                    <a href="#" class="btn">Voir Plus</a>
-                </div>
+        </div>
+    </header>
+    <!-- End header section -->
+    <!-- Banner section -->
+    <section class="banner" id="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <h1 class="b-title">Flores Tours & Travels</h1>
+                <p>Votre Agence de Voyage</p>
+                <a href="#" class="btn btn-big btn-outline">Voir Plus</a>
             </div>
-        </section>
-        <!-- End banner section -->
-    </body>
+        </div>
+    </section>
+    <!-- End banner section -->
+    <!-- Card Secion -->
+    <section class="card py-70" id="card">
+        <div class="container">
+            <div class="card-wrapper">
+                <article>
+                    <header>
+                        <h4>Billeterie</h4>
+                    </header>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta hic quis adipisci sed
+                        laboriosam earum optio inventore tempora itaque qui, nam reiciendis quisquam explicabo minus
+                        natus vero repudiandae quae blanditiis!</p>
+                    <footer><a href="" class="btn btn-mini btn-outline">Voir Plus<i
+                                class="fas fa-angle-double-right"></i></a>
+                    </footer>
+
+                </article>
+
+                <article>
+                    <header>
+                        <h4>Billeterie</h4>
+                    </header>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta hic quis adipisci sed
+                        laboriosam earum optio inventore tempora itaque qui, nam reiciendis quisquam explicabo minus
+                        natus vero repudiandae quae blanditiis!</p>
+
+                    <footer><a href="" class="btn btn-mini btn-outline">Voir Plus<i
+                                class="fas fa-angle-double-right"></i></a>
+                    </footer>
+
+                </article>
+
+                <article>
+                    <header>
+                        <h4>Billeterie</h4>
+                    </header>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta hic quis adipisci sed
+                        laboriosam earum optio inventore tempora itaque qui, nam reiciendis quisquam explicabo minus
+                        natus vero repudiandae quae blanditiis!</p>
+                    <footer><a href="" class="btn btn-mini btn-outline">Voir Plus<i
+                                class="fas fa-angle-double-right"></i></a>
+                    </footer>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- End card seciion -->
+    <!-- Mentors section -->
+    <section class="mentors py-70 bg-bw" id="mentors">
+        <div class="container">
+            <div class="mentors-wrapper">
+                <!-- Mentors header (Title + Description) -->
+                <header class="section-header">
+                    <h1 class="main-title">Une Equipe de qualité </h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, culpa? Provident amet dolore
+                        assumenda tempore, cumque cupiditate eum! Veritatis qui dolorum asperiores. Distinctio aliquid
+                        deleniti praesentium cum voluptas libero sed.</p>
+                </header>
+                <!-- End Mentors header (Title + Description) -->
+                <!-- Mentors container -->
+                <div class="mentors-container row">
+                    <div class="mentor-box px-15">
+                        <div class="box">
+                            <div class="mentor-img">
+                                <img src="assets/imgs/staff/CEO.jpg" alt="mentors" class="img img-rounded">
+                                <h4 class="l4-title">Florence</h4>
+                                <p>CEO de FTT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mentor-box px-15">
+                        <div class="box">
+                            <div class="mentor-img">
+                                <img src="assets/imgs/staff/CEO.jpg" alt="mentors" class="img img-rounded">
+                                <h4 class="l4-title">Florence</h4>
+                                <p>CEO de FTT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mentor-box px-15">
+                        <div class="box">
+                            <div class="mentor-img">
+                                <img src="assets/imgs/staff/CEO.jpg" alt="mentors" class="img img-rounded">
+                                <h4 class="l4-title">Florence</h4>
+                                <p>CEO de FTT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mentor-box px-15">
+                        <div class="box">
+                            <div class="mentor-img">
+                                <img src="assets/imgs/staff/CEO.jpg" alt="mentors" class="img img-rounded">
+                                <h4 class="l4-title">Florence</h4>
+                                <p>CEO de FTT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Mentors container -->
+
+            </div>
+        </div>
+
+    </section>
+    <!--End Mentors section  -->
+    <!-- Footer section  -->
+    <footer class="footer py-70 bg-bw" id="footer">
+        <div class="container">
+            <div class="footer-blocks row">
+                <div class="footer-block f-links px-15">
+                    <!-- footer links -->
+                    <ul>
+                        <li><a href="#">A propos de nous</a></li>
+                        <li><a href="#">Nous écrire</a></li>
+                        <li>
+                            <a href="#">Politique et confidentialité</a>
+                        </li>
+                    </ul>
+                </div><!-- end footer links -->
+
+                <div class="footer-block s-links px-15">
+                    <!-- social links -->
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div><!-- end social links -->
+
+                <div class="copyright" id="copyright">
+                    &copy; | SMART-IT
+                    <script>document.write(new Data().getFullerYear());</script> all rights reserved
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+</body>
+
 </html>

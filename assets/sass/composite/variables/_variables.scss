@@ -1,19 +1,20 @@
 // fonts variables
-$ubuntu:"Ubuntu", sans-serif;
+$ubuntu: "Ubuntu", sans-serif;
 $piazzo: "Piazzolla", serif;
 
-
 // Colors variables
-$main-color:#f773b5;
-$font-color:#ffa400;
-$blue-color:#495454;
-$sec-color :#00dafd;
-$white:#fff;
-$break-white:#eaf6ff;
-$black:#000;
+
+// $main-color:#f773b5;
+$main-color: rgb(248, 145, 212);
+$font-color: #f88bd7;
+$blue-color: #829191;
+$sec-color: #fad9eb;
+$white: #fff;
+$break-white: #e9f5ff;
+$black: rgb(51, 50, 50);
 
 // media queries variables
-$xm: 572px;
+$xs: 572px;
 $sm: 768px;
 $md: 992px;
 $lg: 1200px;
