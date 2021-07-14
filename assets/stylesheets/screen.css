@@ -63,34 +63,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-.container {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 572px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -148,6 +120,34 @@ h6,
   font-weight: 600;
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 572px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -190,12 +190,15 @@ dl {
   padding: 0;
 }
 
-.fas,
-.far,
-.fab,
-.fa {
-  margin: 0 0.25rem;
-  vertical-align: middle;
+.py-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
 .img {
@@ -207,14 +210,12 @@ dl {
   border-radius: 50%;
 }
 
-.py-70 {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.px-15 {
-  padding-left: 15px;
-  padding-right: 15px;
+.fas,
+.far,
+.fab,
+.fa {
+  margin: 0 0.25rem;
+  vertical-align: middle;
 }
 
 .bg-bw {
@@ -239,6 +240,11 @@ dl {
   user-select: none;
   transition: 0.3s ease;
 }
+.btn:hover, .btn:focus {
+  outline: none;
+  background-color: #f66fc7;
+  box-shadow: 2px 4px 8px rgba(51, 50, 50, 0.5);
+}
 .btn.btn-mini {
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
@@ -246,7 +252,7 @@ dl {
 .btn.btn-big {
   padding: 0.75rem 0.5rem;
 }
-.btn.btn-outline:hover {
+.btn.btn-outline:hover, .btn.btn-outline:focus {
   background-color: transparent;
   border-color: #f891d4;
   color: #f891d4;
@@ -270,8 +276,47 @@ header.header .header-container {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 992px) {
+  header.header .logo {
+    position: absolute;
+    left: 50px;
+    top: 15px;
+  }
+}
 header.header .logo img {
   max-width: 80px;
+}
+header.header .hamburger {
+  display: block;
+  position: absolute;
+  color: #fff;
+  right: 20px;
+  top: 10px;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 0.25em;
+  transition: all 0.3s ease;
+}
+header.header .hamburger:hover {
+  color: rgba(233, 245, 255, 0.75);
+  border-color: rgba(233, 245, 255, 0.75);
+}
+header.header .hamburger i {
+  vertical-align: middle;
+}
+@media (max-width: 992px) {
+  header.header nav.navigation {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(51, 50, 50, 0.75);
+    visibility: hidden;
+    transform: translateX(-100%);
+    transform: transform 0.5s ease, visibility 0.5s ease;
+  }
 }
 header.header nav.navigation .nav-links {
   display: flex;
@@ -279,9 +324,29 @@ header.header nav.navigation .nav-links {
   align-items: center;
   min-width: 50%;
 }
+@media (max-width: 992px) {
+  header.header nav.navigation .nav-links {
+    display: block;
+    max-width: 75%;
+    width: 400px;
+    height: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f891d4;
+    color: #fff;
+  }
+}
 header.header nav.navigation .nav-links .nav-item {
   margin-left: 1rem;
   list-style-type: none;
+}
+@media (max-width: 992px) {
+  header.header nav.navigation .nav-links .nav-item {
+    margin-bottom: 1rem;
+  }
 }
 header.header nav.navigation .nav-links .nav-item .nav-link {
   padding: 0.35em 0.75em;
@@ -294,6 +359,19 @@ header.header nav.navigation .nav-links .nav-item .nav-link {
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
+@media (max-width: 992px) {
+  header.header nav.navigation .nav-links .nav-item .nav-link {
+    padding: 0.5rem 1rem;
+    color: #fad9eb;
+  }
+}
+@media (max-width: 992px) and (max-width: md) {
+  header.header nav.navigation .nav-links .nav-item .nav-link {
+    color: #e9f5ff;
+    border-bottom-color: #e9f5ff;
+  }
+}
+
 header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header nav.navigation .nav-links .nav-item .nav-link:active, header.header nav.navigation .nav-links .nav-item .nav-link.active, header.header nav.navigation .nav-links .nav-item .nav-link:hover {
   color: #fddcf2;
   border-block-color: #fddcf2;
@@ -301,10 +379,12 @@ header.header nav.navigation .nav-links .nav-item .nav-link:hover, header.header
 header.header nav.navigation .nav-links .nav-item.submenu {
   position: relative;
 }
-header.header nav.navigation .nav-links .nav-item.submenu:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  top: 100%;
+@media (min-width: 992px) {
+  header.header nav.navigation .nav-links .nav-item.submenu:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
 }
 header.header nav.navigation .nav-links .nav-item.submenu .dropdown-menu {
   position: absolute;
@@ -334,9 +414,8 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
 
 .banner {
   padding: 12em 2em 8em 2em;
-  background: linear-gradient(to bottom, rgba(248, 145, 212, 0.7) 20%, rgba(255, 255, 255, 0.4)), url("../imgs/banner/piste-avion.jpg");
+  background: linear-gradient(to bottom, rgba(248, 145, 212, 0.7) 20%, rgba(255, 255, 255, 0.4)), url("../imgs/banner/piste-avion.jpg") no-repeat top;
   background-size: cover;
-  background-position: center;
   text-align: center;
   border-top: 6px solid #ff64c8;
 }
@@ -408,6 +487,19 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   padding: 1rem;
   margin: auto;
   border-radius: 50%;
+}
+
+#services .service-container article {
+  width: 50%;
+  flex: 0 0 50%;
+}
+#services .service-container article header h4 {
+  font-weight: 400;
+  color: #f891d4;
+}
+#services .service-container article p {
+  color: #333232;
+  padding: 1rem 0;
 }
 
 .footer .footer-blocks .footer-block {

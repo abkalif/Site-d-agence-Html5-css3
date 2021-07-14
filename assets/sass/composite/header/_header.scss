@@ -18,9 +18,16 @@ header.header {
         // background-color: rgb(255, 124, 220);
     }
     .logo {
+        @media (max-width: $md) {
+            position: absolute;
+            left: 50px;
+            top: 15px;
+        }
         img {
             max-width: 80px;
         }
     }
+    @import "hamburger";
+
     @import "navigation";
 }

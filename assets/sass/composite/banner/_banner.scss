@@ -5,9 +5,8 @@
             rgba($main-color, 0.7) 20%,
             rgba($white, 0.4)
         ),
-        url("../imgs/banner/piste-avion.jpg");
+        url("../imgs/banner/piste-avion.jpg") no-repeat top;
     background-size: cover;
-    background-position: center;
     text-align: center;
     border-top: 6px solid rgb(255, 100, 200);
     .banner-wrapper {
