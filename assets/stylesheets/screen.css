@@ -120,6 +120,23 @@ h6,
   font-weight: 600;
 }
 
+.b-title {
+  font-family: "Dancing Script";
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e9f5ff;
+  line-height: 2;
+}
+@media (max-width: 992px) {
+  .b-title {
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -277,6 +294,13 @@ header.header .header-container {
   align-items: center;
 }
 @media (max-width: 992px) {
+  header.header.show .navigation {
+    transform: translateX(0);
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (max-width: 992px) {
   header.header .logo {
     position: absolute;
     left: 50px;
@@ -287,22 +311,27 @@ header.header .logo img {
   max-width: 80px;
 }
 header.header .hamburger {
-  display: block;
-  position: absolute;
-  color: #fff;
-  right: 20px;
-  top: 10px;
-  padding: 0.5rem;
-  border: 1px solid white;
-  border-radius: 0.25em;
-  transition: all 0.3s ease;
+  display: none;
 }
-header.header .hamburger:hover {
-  color: rgba(233, 245, 255, 0.75);
-  border-color: rgba(233, 245, 255, 0.75);
-}
-header.header .hamburger i {
-  vertical-align: middle;
+@media (max-width: 992px) {
+  header.header .hamburger {
+    display: block;
+    position: absolute;
+    color: #fff;
+    right: 20px;
+    top: 10px;
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 0.25em;
+    transition: all 0.3s ease;
+  }
+  header.header .hamburger:hover {
+    color: rgba(233, 245, 255, 0.75);
+    border-color: rgba(233, 245, 255, 0.75);
+  }
+  header.header .hamburger i {
+    vertical-align: middle;
+  }
 }
 @media (max-width: 992px) {
   header.header nav.navigation {
@@ -427,14 +456,10 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   padding-bottom: 1.5rem;
   text-shadow: 1px 1px 5px rgba(248, 145, 212, 0.75);
 }
-.banner .banner-wrapper .b-title {
-  font-family: "Dancing Script";
-  font-size: 3em;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #e9f5ff;
-  line-height: 2;
+@media (max-width: 992px) {
+  .banner .banner-wrapper {
+    width: 90%;
+  }
 }
 .banner .banner-wrapper p {
   color: #fff;
@@ -442,6 +467,11 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .banner .banner-wrapper p {
+    font-size: 1.1rem;
+  }
 }
 
 .card .card-wrapper {
@@ -468,6 +498,23 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
 }
 .card .card-wrapper article p {
   color: #333232;
+}
+@media (max-width: 992px) {
+  .card .card-wrapper {
+    flex-flow: column;
+  }
+  .card .card-wrapper article {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    border-right-color: transparent;
+    border-bottom-color: rgba(250, 217, 235, 0.15);
+  }
+  .card .card-wrapper article:last-child {
+    border-bottom-color: transparent;
+  }
+  .card .card-wrapper article h4 {
+    max-width: 100%;
+  }
 }
 
 #mentors .mentors-wrapper .mentors-container .mentor-box {

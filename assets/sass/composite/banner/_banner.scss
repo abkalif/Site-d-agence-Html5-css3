@@ -17,21 +17,19 @@
         margin-right: auto;
         padding-bottom: 1.5rem;
         text-shadow: 1px 1px 5px rgba($main-color, 0.75);
-        .b-title {
-            font-family: "Dancing Script";
-            font-size: 3em;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: $break-white;
-            line-height: 2;
+        @media (max-width: $md) {
+            width: 90%;
         }
+
         p {
             color: $white;
             font-family: Open Sans Condensed;
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 2rem;
+            @media (max-width: $md) {
+                font-size: 1.1rem;
+            }
         }
     }
 }

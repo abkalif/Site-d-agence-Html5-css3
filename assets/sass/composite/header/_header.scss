@@ -17,6 +17,15 @@ header.header {
         align-items: center;
         // background-color: rgb(255, 124, 220);
     }
+    @media (max-width: $md) {
+        &.show {
+            .navigation {
+                transform: translateX(0);
+                visibility: visible;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
     .logo {
         @media (max-width: $md) {
             position: absolute;

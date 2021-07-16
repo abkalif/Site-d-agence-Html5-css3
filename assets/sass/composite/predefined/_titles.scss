@@ -46,3 +46,18 @@ h6,
     font-size: 2rem;
     font-weight: 600;
 }
+
+.b-title {
+    font-family: "Dancing Script";
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $break-white;
+    line-height: 2;
+    @media (max-width: $md) {
+        font-size: 2em;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
