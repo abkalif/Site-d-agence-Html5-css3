@@ -103,14 +103,31 @@ h6,
   font-size: 1.2em;
 }
 
+.main-title .b-title {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .main-title .b-title {
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
 .main-title {
   margin-bottom: 2rem;
-  font-size: 3em;
   font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  text-align: center;
   line-height: 1;
   color: #f891d4;
+}
+
+.b-title {
+  font-family: "Dancing Script";
+  margin-bottom: 2rem;
+  color: #e9f5ff;
+  line-height: 2;
 }
 
 .l4-title {
@@ -120,20 +137,15 @@ h6,
   font-weight: 600;
 }
 
-.b-title {
-  font-family: "Dancing Script";
-  font-size: 3em;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #e9f5ff;
-  line-height: 2;
+.section-header p {
+  color: #333232;
 }
-@media (max-width: 992px) {
-  .b-title {
-    font-size: 2em;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+@media (max-widt: md) {
+  .section-header {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -237,10 +249,6 @@ dl {
 
 .bg-bw {
   background-color: #e9f5ff;
-}
-
-.section-header {
-  color: #333232;
 }
 
 .btn {
@@ -521,6 +529,22 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   width: 25%;
   flex: 0 0 25%;
 }
+@media (max-width: 992px) {
+  #mentors .mentors-wrapper .mentors-container .mentor-box {
+    width: 50%;
+    flex: 0 0 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  #mentors .mentors-wrapper .mentors-container .mentor-box {
+    width: 90%;
+    flex: 0 0 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 #mentors .mentors-wrapper .mentors-container .box {
   text-align: center;
   border-radius: 0.25rem;
@@ -540,18 +564,38 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   width: 50%;
   flex: 0 0 50%;
 }
+@media (max-width: 992px) {
+  #services .service-container article {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
 #services .service-container article header h4 {
   font-weight: 400;
   color: #f891d4;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(248, 145, 212, 0.25);
 }
 #services .service-container article p {
   color: #333232;
   padding: 1rem 0;
 }
+@media (max-width: 992px) {
+  #services .service-container article p {
+    padding: 0;
+  }
+}
 
 .footer .footer-blocks .footer-block {
   width: 50%;
   flex: 0 0 50%;
+}
+@media (max-width: 992px) {
+  .footer .footer-blocks .footer-block {
+    width: 100%;
+    flex: 0 0 100%;
+  }
 }
 .footer .footer-blocks .f-links li {
   margin-bottom: 1rem;

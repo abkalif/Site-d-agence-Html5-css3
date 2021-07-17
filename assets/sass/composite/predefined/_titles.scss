@@ -31,14 +31,28 @@ h6,
 .h6 {
     font-size: 1.2em;
 }
+.main-title .b-title {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    @media (max-width: $md) {
+        font-size: 2em;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
 .main-title {
     margin-bottom: 2rem;
-    font-size: 3em;
     font-family: $ubuntu;
-    font-weight: 400;
-    text-align: center;
     line-height: 1;
     color: $main-color;
+}
+
+.b-title {
+    font-family: "Dancing Script";
+    margin-bottom: 2rem;
+    color: $break-white;
+    line-height: 2;
 }
 .l4-title {
     font-family: $piazzo;
@@ -46,18 +60,15 @@ h6,
     font-size: 2rem;
     font-weight: 600;
 }
+.section-header {
+    p {
+        color: $black;
+    }
 
-.b-title {
-    font-family: "Dancing Script";
-    font-size: 3em;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: $break-white;
-    line-height: 2;
-    @media (max-width: $md) {
-        font-size: 2em;
-        line-height: 1.2;
-        margin-bottom: 1rem;
+    @media (max-widt: md) {
+        max-width: 90%;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
