@@ -1,0 +1,16 @@
+.input-group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; // reserrer les chose
+}
+
+.form-control {
+    position: relative;
+    display: block;
+    height: calc(2.5rem + 2px);
+    outline: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}

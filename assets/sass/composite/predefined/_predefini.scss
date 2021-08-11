@@ -8,6 +8,8 @@
 @import "reset";
 @import "padding";
 @import "img";
+@import "form";
+
 .fas,
 .far,
 .fab,
@@ -18,4 +20,12 @@
 
 .bg-bw {
     background-color: $break-white;
+}
+
+.t-center {
+    text-align: center !important;
+}
+
+.fw-300 {
+    font-weight: 300 !important;
 }
