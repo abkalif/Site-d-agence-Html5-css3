@@ -62,6 +62,13 @@ h6,
     font-weight: 600;
 }
 
+.post-title {
+    font-family: $ubuntu;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $main-color;
+}
+
 .widget-title {
     padding: 8px 0;
     margin-bottom: 30px;

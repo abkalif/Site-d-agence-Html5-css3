@@ -1,39 +1,7 @@
 .news-item {
     display: flex;
     margin-bottom: 4rem;
-    .news-info {
-        width: 25%;
-        flex: 0 0 25%;
-        // text-align: right;
-        .post-tag {
-            padding-bottom: 1rem;
-            a {
-                font: 300 0.9em/1.2 $ubuntu;
-                color: $font-color;
-                transition: 0.25s ease-in;
-                &:active,
-                &.active,
-                &.hover,
-                &:hover {
-                    color: $main-color;
-                }
-            }
-        }
-
-        .news-meta {
-            padding-left: 0;
-
-            a {
-                display: inline-block;
-                padding-bottom: 1rem;
-                font-size: 0.9em;
-                font-weight: 300;
-                line-height: 1;
-                vertical-align: middle;
-                color: $black;
-            }
-        }
-    }
+    // @import "_news-info.scss";
     .news-post {
         width: 75%;
         flex: 0 0 75%;
