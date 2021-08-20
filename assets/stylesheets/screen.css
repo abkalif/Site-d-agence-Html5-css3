@@ -533,6 +533,12 @@ header.header nav.navigation .nav-links .nav-item.submenu a.nav-link:hover, head
   text-align: center;
   border-top: 6px solid #ff64c8;
 }
+.banner.index h1 {
+  font-size: 5rem;
+}
+.banner.index .pa {
+  font-size: 2rem;
+}
 .banner.single-banner {
   height: 200px;
   background: linear-gradient(to bottom, rgba(248, 145, 212, 0.7) 20%, rgba(255, 255, 255, 0.4)), url("../imgs/banner/antenne.jpg") no-repeat center;

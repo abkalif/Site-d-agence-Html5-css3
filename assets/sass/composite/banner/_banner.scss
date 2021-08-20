@@ -10,6 +10,15 @@
     text-align: center;
     border-top: 6px solid rgb(255, 100, 200);
 
+    &.index {
+        h1 {
+            font-size: 5rem;
+        }
+        .pa {
+            font-size: 2rem;
+        }
+    }
+
     &.single-banner {
         height: 200px;
         background: linear-gradient(
